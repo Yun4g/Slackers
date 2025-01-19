@@ -16,7 +16,8 @@ function SearchComponent() {
         <header className=' flex  gap-4 md:gap-3 lg:gap-0 justify-between p-4 h-fit md:ps-7 md:pe-7 lg:ps-27  lg:pe-27 items-center md:h-20 w-full  bg-slate-900 shadow-lg shadow-slate-600'>
             <Link to={'/'} className=' h-14 w-28  rounded-lg overflow-hidden'>
             <img src={Logo} className=' w-full h-full' alt="" />
-            </Link>
+            </Link> 
+            
       
        
        <form action="" className=' bg-white lg:w-[900px] flex justify-center items-center ps-1 rounded-lg overflow-hidden h-[47px]'>
