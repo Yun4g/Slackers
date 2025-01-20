@@ -5,7 +5,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { faFaceSadTear } from "@fortawesome/free-solid-svg-icons";
-import Logo  from  '/src/assets/logo.jpg'
+import Logo  from  '/assets/logo.jpg'
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons"; 
 import { Link, useNavigate  } from "react-router-dom";
 

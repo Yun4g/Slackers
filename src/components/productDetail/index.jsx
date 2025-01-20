@@ -1,6 +1,6 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import useFetch from "../useFetch";
-import Logo  from  '/src/assets/logo.jpg'
+import Logo  from  '/assets/logo.jpg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons"; 
 import { faFaceGrinHearts } from "@fortawesome/free-solid-svg-icons";

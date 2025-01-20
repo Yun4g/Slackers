@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import Logo from '/src/assets/logo.jpg'
+import Logo from '/assets/logo.jpg'
 import { Link } from 'react-router-dom'
 import { GlobalContext } from '../useContext'
 

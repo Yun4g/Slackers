@@ -2,6 +2,7 @@ import { useContext } from "react"
 import Header from "../header"
 import { GlobalContext } from "../useContext"
 import ToggleComponent from "../togleComponent"
+import heroImage from '/assets/eccomerceBg.jpg';
 
 
 
@@ -13,7 +14,9 @@ function LandingPage() {
 
     const {navigatIon, toggleState}  =  useContext(GlobalContext)
     return (
-        <section className="bg-hero-background relative   bg-cover    bg-center h-screen     ">
+        <section className=" relative   bg-cover    bg-center h-screen     " style={{
+            backgroundImage: `url(${heroImage})`, 
+          }}>
             <Header />
             <div className={` absolute top-22 w-full  bg-slate-900 transition-all duration-300   ${ toggleState ? 'h-[170px] block  ': 'h-0 hidden'} `}>
             <ToggleComponent/>

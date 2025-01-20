@@ -1,4 +1,4 @@
-import Logo  from  '/src/assets/logo.jpg'
+import Logo  from  '/assets/logo.jpg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons"; 
 import {faSearch} from  "@fortawesome/free-solid-svg-icons";
