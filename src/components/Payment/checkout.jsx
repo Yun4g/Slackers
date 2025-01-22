@@ -13,7 +13,7 @@ function Checkout() {
     return (
         <section className=" bg-slate-800 flex justify-center items-center h-screen w-full">
 
-            <form    onSubmit={(e) => e.preventDefault()} action="" className=" flex flex-wrap gap-4  shadow-lg shadow-sky-700  md:w-[600px]  rounded-2xl p-5">
+            <form  onSubmit={(e) => e.preventDefault()} action="" className=" flex flex-wrap gap-4  shadow-lg shadow-sky-700  md:w-[600px]  rounded-2xl p-5">
                 <h1 className=" text-3xl font-bold text-center mb-5 w-full text-white">Payment Details</h1>
 
                 <div className=" w-full  md:w-fit  ">
