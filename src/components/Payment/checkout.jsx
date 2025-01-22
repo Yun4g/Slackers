@@ -13,7 +13,7 @@ function Checkout() {
     return (
         <section className=" bg-slate-800 flex justify-center items-center h-screen w-full">
 
-            <form  action="" className=" flex flex-wrap gap-4  shadow-lg shadow-sky-700  md:w-[600px]  rounded-2xl p-5">
+            <form    onSubmit={(e) => e.preventDefault()} action="" className=" flex flex-wrap gap-4  shadow-lg shadow-sky-700  md:w-[600px]  rounded-2xl p-5">
                 <h1 className=" text-3xl font-bold text-center mb-5 w-full text-white">Payment Details</h1>
 
                 <div className=" w-full  md:w-fit  ">
@@ -96,7 +96,7 @@ function Checkout() {
                   </p>
                 </div>
 
-                <PaystackButton className="h-10 md:h-16 w-full md:w-fit  cursor-pointer  bg-red-800 text-white md:p-4 text-lg rounded-md" value="Continue To Pay"  {...ComponentProps}/>
+                <PaystackButton onclick={console.log(ComponentProps)} className="h-10 md:h-16 w-full md:w-fit  cursor-pointer  bg-red-800 text-white md:p-4 text-lg rounded-md" value="Continue To Pay"  {...ComponentProps}/>
 
             </form>
         </section>

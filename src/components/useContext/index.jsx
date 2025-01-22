@@ -54,8 +54,8 @@ function GlobalState({children}) {
         publicKey,
         text: "pay with PayStack",
         onSuccess : ()=> alert('Payment successful'),
-        onclose : ()=> alert('are you sure you want to close')
-
+        onclose : ()=> alert('are you sure you want to close'),
+        
     }
     console.log('First Name:', firstName);
     console.log('Last Name:', lastName);
