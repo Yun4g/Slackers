@@ -92,7 +92,7 @@ function Checkout() {
                 </div>
                 <div>
                   <p  className=" h-10 md:h-16 border-2 outline-none bg-white flex items-center justify-center w-full p-4 text-slate-800 font-bold text-lg rounded-md">
-                      Amount($<span>{totalPrice}</span>)
+                       Total($<span>{totalPrice.toFixed(2)}</span>)
                   </p>
                 </div>
 
