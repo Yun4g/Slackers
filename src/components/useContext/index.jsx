@@ -160,6 +160,8 @@ function GlobalState({children}) {
         setCartItem(updatedCart)
         localStorage.setItem('cart', JSON.stringify(updatedCart));
 
+        
+
     }
 
 
@@ -181,6 +183,11 @@ function GlobalState({children}) {
            setCartItem(updatedCart)
            localStorage.setItem("cart", JSON.stringify(updatedCart));
            console.log(updatedCart);
+
+
+           if (newItem.quantity < 1) {
+            removeFromCart(newItem)
+           } 
            
     }
  
