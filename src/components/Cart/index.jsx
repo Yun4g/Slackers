@@ -100,11 +100,10 @@ function CartComponent() {
                            <div className=" mt-4 lg:mt-0 ms-16 flex flex-col gap-6">
                       
                           
-                          <button onClick={()=> navigate('/Checkout')} className={"bg-black  h-12 rounded-md  w-56 text-white mt"}>
+                          <button onClick={()=> navigate('/')} className={"bg-black  h-12 rounded-md  w-56 text-white mt"}>
                             Amount(${totalPrice.toFixed(4)})
                           </button>
 
-                          <button onClick={()=> navigate('/Checkout')} > test button </button>
                            </div>
                   
                          
