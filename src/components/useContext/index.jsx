@@ -180,14 +180,14 @@ function GlobalState({children}) {
         const updatedCart = cartItem.map((item)=>(
             item.id === newItem.id  && item.quantity > 1   ? { ...item, quantity: item.quantity - 1 } : item    
            ))           
-           setCartItem(updatedCart)
-           localStorage.setItem("cart", JSON.stringify(updatedCart));
-           console.log(updatedCart);
-
-
-           if (newItem.quantity < 1) {
-            removeFromCart(newItem)
-           } 
+    
+           if (newItem.quantity <= 1) {
+            removeFromCart(newItem.id)
+           } else{
+            setCartItem(updatedCart)
+            localStorage.setItem("cart", JSON.stringify(updatedCart));
+            console.log(updatedCart);
+           }
            
     }
  
