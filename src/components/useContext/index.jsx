@@ -143,7 +143,7 @@ function GlobalState({children}) {
            setCartItem(updatedCart)
            localStorage.setItem("cart", JSON.stringify(updatedCart));
          
-
+          alert('already added to cart')
        
         } else {
             const updatedCart = [...cartItem, { ...newItem, quantity: 1 }];
