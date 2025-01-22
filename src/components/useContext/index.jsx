@@ -65,9 +65,10 @@ function GlobalState({children}) {
     console.log('phone:',phone)
     console.log('Email:', email);
     console.log('Amount:', totalPrice * 100);
+
+
    const handleOnchange = (event)=>{
           const {name, value} = event.target;
-
             switch (name) {
                 case 'firstName':
                    setFirstName(value);   
@@ -133,7 +134,7 @@ function GlobalState({children}) {
 
     const addToCart = (newItem) => {
         const existingCart = cartItem.find((item)=> item.id === newItem.id)
-        console.log("Add to Cart clicked:", newItem);
+     
         if (existingCart) {        
            const updatedCart = cartItem.map((item)=>(
             item.id === newItem.id ? {...item, quantity : item.quantity + 1 }  : item 

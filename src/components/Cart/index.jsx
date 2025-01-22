@@ -103,6 +103,8 @@ function CartComponent() {
                           <button onClick={()=> navigate('/Checkout')} className={"bg-black  h-12 rounded-md  w-56 text-white mt"}>
                             Amount(${totalPrice.toFixed(4)})
                           </button>
+
+                          <button onClick={()=> navigate('/Checkout')} > test button </button>
                            </div>
                   
                          
