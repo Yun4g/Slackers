@@ -7,7 +7,7 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { faFaceSadTear } from "@fortawesome/free-solid-svg-icons";
 import Logo  from  '/assets/logo.jpg'
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons"; 
-import { Link, useNavigate  } from "react-router-dom";
+import { Link,  useNavigate,  } from "react-router-dom";
 
 
 
@@ -16,8 +16,7 @@ import { Link, useNavigate  } from "react-router-dom";
 function CartComponent() {
     const { cartItem,  removeFromCart, totalPrice,  increamentQuantity, DecreamentQuantity } = useContext(GlobalContext)
     
-    const navigate = useNavigate()
-
+       const navigate = useNavigate()
 
     return(
          <>
@@ -52,6 +51,8 @@ function CartComponent() {
                           <FontAwesomeIcon icon={ faCartShopping} className=' cursor-pointer   text-3xl text-red-700' />
                           <p className=' absolute top-0 right-2 text-2xl text-red-700'>{cartItem.length}</p>
                           </div>
+
+                          
                      
                    </nav>
                     </header>
@@ -99,11 +100,9 @@ function CartComponent() {
                         </div>
                            <div className=" mt-4 lg:mt-0 ms-16 flex flex-col gap-6">
                       
-                          
-                          <button onClick={()=> navigate('/Checkout')} onTouchStart={()=> navigate('/Checkout')} className={"bg-black  h-12 rounded-md  w-56 text-white mt"}>
-                            Amount(${totalPrice.toFixed(4)}) hi
-                          </button>
-
+                        
+                         
+                         <Link to={'/Checkout'} className={"bg-black  flex justify-center items-center h-12 rounded-md  w-56 text-white mt"}>  Amount(${totalPrice.toFixed(4)}) </Link>
                            </div>
                   
                          
