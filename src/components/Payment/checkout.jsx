@@ -7,11 +7,9 @@ import { PaystackButton } from "react-paystack"
 
 function Checkout() {
    
-
-
     const { totalPrice,  handleOnchange,  ComponentProps  } = useContext(GlobalContext)
 
-   
+  
     return (
         <section className=" bg-slate-800 flex justify-center items-center h-screen w-full">
 

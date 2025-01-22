@@ -158,7 +158,8 @@ function GlobalState({children}) {
     const removeFromCart = (itemId) => {
         const updatedCart = cartItem.filter((item) => item.id !== itemId)
         setCartItem(updatedCart)
-         localStorage.removeItem(updatedCart)
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+
     }
 
 
