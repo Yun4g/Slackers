@@ -102,7 +102,7 @@ function CartComponent() {
                       
                         
                          
-                         <Link to={'/Checkout'} className={"bg-black  flex justify-center items-center h-12 rounded-md  w-56 text-white mt"}>  Amount(${totalPrice.toFixed(4)}) hhh </Link>
+                         <Link to={'/Checkout'} className={"bg-black  flex justify-center items-center h-12 rounded-md  w-56 text-white mt"}>  Amount(${totalPrice.toFixed(4)})  </Link>
                            </div>
                   
                          
