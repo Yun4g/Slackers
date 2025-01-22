@@ -10,7 +10,7 @@ export const GlobalContext = createContext(null);
 
 
 function GlobalState({children}) {
-     const publicKey = 'pk_test_ef545c8d586d88daee8f055eb3f3f42d136d4865';
+     const publicKey = 'sk_test_58f1b8977666139733f606d298ecde4322db16ca';
      
 
 
