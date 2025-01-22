@@ -101,7 +101,7 @@ function CartComponent() {
                       
                           
                           <button onClick={()=> navigate('/Checkout')} onTouchStart={()=> navigate('/Checkout')} className={"bg-black  h-12 rounded-md  w-56 text-white mt"}>
-                            Amount(${totalPrice.toFixed(4)})
+                            Amount(${totalPrice.toFixed(4)}) hi
                           </button>
 
                            </div>
