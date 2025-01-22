@@ -14,7 +14,7 @@ import { Link, useNavigate  } from "react-router-dom";
 
 
 function CartComponent() {
-    const { cartItem,  removeFromCart, increamentQuantity, DecreamentQuantity, totalPrice } = useContext(GlobalContext)
+    const { cartItem,  removeFromCart, totalPrice,  increamentQuantity, DecreamentQuantity } = useContext(GlobalContext)
     
     const navigate = useNavigate()
 
@@ -74,12 +74,12 @@ function CartComponent() {
                                
                                     
                              <div className="flex flex-col md:flex-row justify-center mt-3 md:mt-0  items-center gap-2 md:gap-12">
-                                 <button onClick={()=> increamentQuantity(item)} className=" h-8 w-8 md:h-12 md:w-12  items-center bg-slate-950 text-white  rounded-full flex justify-center">
+                                 <button  onClick={()=> increamentQuantity(item)} className=" h-8 w-8 md:h-12 md:w-12  items-center bg-slate-950 text-white  rounded-full flex justify-center">
                                <FontAwesomeIcon icon={faPlus}  />
                                  </button>
 
                                  <p className="font-semibold text-white ">Quantity: {item.quantity}</p>
-                                 <button onClick={()=> DecreamentQuantity(item)} className="  h-8 w-8 md:h-12 md:w-12  items-center bg-slate-950 text-white rounded-full flex justify-center">
+                                 <button onClick={()=> DecreamentQuantity(item)}  className="  h-8 w-8 md:h-12 md:w-12  items-center bg-slate-950 text-white rounded-full flex justify-center">
                                  <FontAwesomeIcon icon={faMinus}  />
                                  </button>
                                 
@@ -100,8 +100,8 @@ function CartComponent() {
                            <div className=" mt-4 lg:mt-0 ms-16 flex flex-col gap-6">
                       
                           
-                          <button className={"bg-black  h-12 rounded-md  w-56 text-white mt"}>
-                            Checkout(${totalPrice.toFixed(4)})
+                          <button onClick={()=> navigate('/Checkout')} className={"bg-black  h-12 rounded-md  w-56 text-white mt"}>
+                            Amount(${totalPrice.toFixed(4)})
                           </button>
                            </div>
                   

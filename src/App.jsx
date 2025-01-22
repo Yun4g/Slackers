@@ -4,6 +4,9 @@ import LandingPage from './components/LandingPage'
 import ProductList from './components/productList'
 import ProductDetail from './components/productDetail'
 import CartComponent from './components/Cart'
+import Payment from './components/Payment'
+import Checkout from './components/Payment/checkout'
+
 function App() {
  
   return (
@@ -13,6 +16,8 @@ function App() {
              <Route path='/productsList' element={<ProductList/>}/>
              <Route path='/productsList/:id' element={<ProductDetail/>}/>
              <Route path='/Cart-item' element={<CartComponent/>}/>
+             <Route path='/Checkout' element={<Checkout/>}/>
+              <Route path='/Payment' element={<Payment/>}/>
         </Routes>
       </div> 
   )

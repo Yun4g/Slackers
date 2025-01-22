@@ -29,6 +29,8 @@ function SearchComponent() {
        <div className=' relative  h-full flex mt-5 md:mt-0 items-end  pt-4'>          
        <Link to={'/Cart-item'}>
         <FontAwesomeIcon icon={ faCartShopping} className='   cursor-pointer   text-2xl text-red-700' />
+       
+       
         <p className=' absolute  right-0 bottom-5 text-white text-lg '>{cartItem.length}</p>
         </Link>
        </div>

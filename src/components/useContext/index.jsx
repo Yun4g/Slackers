@@ -23,7 +23,68 @@ function GlobalState({children}) {
           setToggleState(!toggleState)
     }
 
+
+    const [firstName, setFirstName] = useState('');
+    const[lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [amount, setAmount] = useState('');
+    const [address, setAddress] = useState('');
+    const [city, setCity] = useState('');
+    const [state, setState] = useState('');
+
+
+
     
+   const handleOnchange = (event)=>{
+          const {name, value} = event.target;
+
+            switch (name) {
+                case 'firstName':
+                   setFirstName(value);   
+                   console.log(firstName)       
+                    break;
+                    
+                case 'lastName':
+                    setLastName(value); 
+                    console.log(lastName)         
+                    break;
+                    
+                case 'email':
+                    setEmail(value);   
+                    console.log(email)        
+                    break;
+                    
+                case 'amount':
+                    setAmount(value);  
+                    console.log(amount)        
+                    break;
+                    
+                case 'address':
+                    setAddress(value); 
+                    console.log(address)         
+                    break;
+                    
+                case' city':
+                    setCity(value);  
+                    console.log(city)        
+                    break;
+                    
+                case 'state':
+                    setState(value);  
+                    console.log(state)        
+                    break;
+        
+            
+                default:
+                    break;
+            }
+
+    
+
+    }
+
+
+
     useEffect(() => {
         const total = cartItem.reduce((acc, curr) => acc + curr.price * curr.quantity, 0);
         setTotalPrice(total);
@@ -47,16 +108,15 @@ function GlobalState({children}) {
            setCartItem(updatedCart)
            localStorage.setItem("cart", JSON.stringify(updatedCart));
          
-  
 
        
         } else {
             const updatedCart = [...cartItem, { ...newItem, quantity: 1 }];
             setCartItem(updatedCart)
             localStorage.setItem('cart', JSON.stringify(updatedCart))
-
-        }
             navigate('/Cart-item')
+        }
+           
     }
 
     
@@ -73,8 +133,7 @@ function GlobalState({children}) {
            ))           
            setCartItem(updatedCart)
            localStorage.setItem("cart", JSON.stringify(updatedCart));
-           console.log(updatedCart);
-          
+           console.log(updatedCart);       
     }
 
 
@@ -98,7 +157,16 @@ function GlobalState({children}) {
         DecreamentQuantity ,
         toggleState,
         totalPrice,
-        ToggleMenu
+        ToggleMenu,
+        handleOnchange,
+        firstName,
+        lastName,
+        email,
+        address,
+        amount,
+        city,
+        state
+
     }} > {children} </GlobalContext.Provider>
     
 }
