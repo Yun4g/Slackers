@@ -68,12 +68,12 @@ function ProductDetail() {
                     
                        <p className=" font-semibold w-64 md:w-96">{data.description}</p>
                        <p className=" font-bold text-red-950 mt-5 mb-5 ">Price: ${data.price}</p>
-{/*        
-                       <button onClick={() => addToCart(data) }   onTouchStart={() => addToCart(data)}  className="   w-72 z-[999/;] rounded-md text-slate-50  h-10 bg-slate-950"> 
+       
+                       <button onClick={() => addToCart(data) }   onTouchStart={() => addToCart(data)}  className="   w-72 z-[999;] rounded-md text-slate-50  h-10 bg-slate-950"> 
                        <FontAwesomeIcon icon={ faCartShopping} className=' cursor-pointer   text-sm me-2' />
-                           Add To Cart</button> */}
+                           Add To Cart</button>
 
-                           <button onClick={() => addToCart(data) }   onTouchStart={() => addToCart(data)}  > test button</button>
+                       
                     
                        </div>
                    
