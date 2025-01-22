@@ -10,6 +10,11 @@ export const GlobalContext = createContext(null);
 
 
 function GlobalState({children}) {
+     const publicKey = 'pk_test_ef545c8d586d88daee8f055eb3f3f42d136d4865';
+     
+
+
+
     const navigate = useNavigate()
     const [cartItem, setCartItem] = useState( ()=>{
        const storeData = localStorage.getItem('cart');
@@ -31,10 +36,35 @@ function GlobalState({children}) {
     const [address, setAddress] = useState('');
     const [city, setCity] = useState('');
     const [state, setState] = useState('');
+    const [phone, setPhone] = useState('')
 
 
+    const ComponentProps = {
+        email,
+        amount: totalPrice * 100,
+        metaData: {
+            name: `${firstName} ${lastName}`,
+            phone,
+            city,
+            state,
+            address,
+            firstName,
+            lastName,
+        },
+        publicKey,
+        text: "pay with PayStack",
+        onSuccess : ()=> alert('Payment successful'),
+        onclose : ()=> alert('are you sure you want to close')
 
-    
+    }
+    console.log('First Name:', firstName);
+    console.log('Last Name:', lastName);
+    console.log('city:',city)
+    console.log('state:',state)
+    console.log('address:',address)
+    console.log('phone:',phone)
+    console.log('Email:', email);
+    console.log('Amount:', totalPrice * 100);
    const handleOnchange = (event)=>{
           const {name, value} = event.target;
 
@@ -63,8 +93,13 @@ function GlobalState({children}) {
                     setAddress(value); 
                     console.log(address)         
                     break;
+
+                 case 'phone':
+                     setPhone(value)
+                     console.log(phone) 
+                     break;
                     
-                case' city':
+                case'city':
                     setCity(value);  
                     console.log(city)        
                     break;
@@ -165,7 +200,8 @@ function GlobalState({children}) {
         address,
         amount,
         city,
-        state
+        state,
+        ComponentProps 
 
     }} > {children} </GlobalContext.Provider>
     

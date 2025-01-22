@@ -1,23 +1,21 @@
 import { useContext } from "react"
-import { useNavigate } from "react-router-dom"
 import { GlobalContext } from "../useContext"
+import { PaystackButton } from "react-paystack"
 
 
 
 
 function Checkout() {
-    const  navigate  = useNavigate()
+   
 
-    const { totalPrice,  handleOnchange,  } = useContext(GlobalContext)
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        navigate('/Payment')
-    }
+    const { totalPrice,  handleOnchange,  ComponentProps  } = useContext(GlobalContext)
+
+   
     return (
         <section className=" bg-slate-800 flex justify-center items-center h-screen w-full">
 
-            <form onSubmit={handleSubmit} action="" className=" flex flex-wrap gap-4  shadow-lg shadow-sky-700  md:w-[600px]  rounded-2xl p-5">
+            <form  action="" className=" flex flex-wrap gap-4  shadow-lg shadow-sky-700  md:w-[600px]  rounded-2xl p-5">
                 <h1 className=" text-3xl font-bold text-center mb-5 w-full text-white">Payment Details</h1>
 
                 <div className=" w-full  md:w-fit  ">
@@ -100,7 +98,7 @@ function Checkout() {
                   </p>
                 </div>
 
-                <input type="submit" className="h-10 md:h-16 w-full md:w-fit  cursor-pointer  bg-red-800 text-white md:p-4 text-lg rounded-md" value="Continue To Pay" />
+                <PaystackButton className="h-10 md:h-16 w-full md:w-fit  cursor-pointer  bg-red-800 text-white md:p-4 text-lg rounded-md" value="Continue To Pay"  {...ComponentProps}/>
 
             </form>
         </section>
