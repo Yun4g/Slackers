@@ -36,8 +36,8 @@ function ProductList() {
         <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-2 p-4 md:p-24">
             {
                filterdData.length === 0 ? (
-                <div className="  absolute  top-[100px]  left-[680px] text-center  ">
-                <FontAwesomeIcon icon={faFaceSadTear} className=" text-9xl   text-gray-700" />
+                <div className="  absolute  top-[100px]  left-16 md:left-[680px] text-center  ">
+                <FontAwesomeIcon icon={faFaceSadTear} className=" text-4xl md:text-9xl   text-gray-700" />
               <h1 className="text-4xl  text-slate-700 font-bold">No  Matches </h1>
               
               </div>
