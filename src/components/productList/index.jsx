@@ -1,9 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import SearchComponent from "../searchComponent"
 import useFetch from "../useFetch"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFaceGrinHearts } from "@fortawesome/free-solid-svg-icons";
-
 
 
 
@@ -17,17 +14,15 @@ function ProductList() {
      console.log(data)
    
     return(
-        <section className=" bg-slate-800">
+        <section className=" bg-gray-100 ">
             <SearchComponent/>
              {
                 loading ? (
-                    <div className="  bg-slate-800 h-screen overflow-y-scroll overflow-x-hidden pb-5 ">
+                    <div className=" bg-gray-600 bg-opacity-50  h-screen  overflow-hidden pb-5 ">
                     
                     <section>
-                          <div className="flex flex-col justify-center items-center h-screen w-full">
-                            <FontAwesomeIcon icon={faFaceGrinHearts } className=" text-9xl text-white" />
-                          <h1 className="text-4xl text-white font-bold">loading...</h1>
-                        
+                          <div className="flex flex-col justify-center items-center  h-screen w-full">
+                             <div className="border-4 border-black  animate-spin   w-14 h-14  border-dotted rounded-full  "></div>
                           </div>
     
                     </section>
@@ -44,9 +39,9 @@ function ProductList() {
                                       <div className=" h-1/2 flex flex-col justify-center  gap-1 ">
                                      
                                       <h2 className="font-bold">{product.title}</h2>
-                                       <p className=" line-clamp-4 text-sm ">{product.description}</p>                                  
+                                       <p  onClick={() => navigate(`/productsList/${product.id}`)} className=" line-clamp-4 text-sm underline text-red-900 cursor-pointer transition-transform hover:scale-110">{product.description}</p>                                  
                                       <p className=" font-bold text-red-950"> Price: ${product.price}</p>
-                                      <button    onClick={() => navigate(`/productsList/${product.id}`)}  className=" w-32 rounded-md text-slate-50  h-10 bg-slate-950"> Select Item </button>                               
+                                    
                                       </div>
                                   
                                 </div>

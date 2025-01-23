@@ -13,7 +13,7 @@ function SearchComponent() {
     const {cartItem} = useContext(GlobalContext)
 
     return(
-        <header className=' flex  gap-4 md:gap-3 lg:gap-0 justify-between p-4 h-fit md:ps-7 md:pe-7 lg:ps-27  lg:pe-27 items-center md:h-20 w-full  bg-slate-900 shadow-lg shadow-slate-600'>
+        <header className=' flex  gap-4 md:gap-3 lg:gap-0 justify-between p-4 h-fit md:ps-7 md:pe-7 lg:ps-27  lg:pe-27 items-center md:h-20 w-full   shadow-lg shadow-slate-600'>
             <Link to={'/'} className=' h-14 w-28  rounded-lg overflow-hidden'>
             <img src={Logo} className=' w-full h-full' alt="" />
             </Link> 
@@ -28,10 +28,11 @@ function SearchComponent() {
 
        <div className=' relative  h-full flex mt-5 md:mt-0 items-end  pt-4'>          
        <Link to={'/Cart-item'}>
-        <FontAwesomeIcon icon={ faCartShopping} className='   cursor-pointer   text-2xl text-red-700' />
+        <FontAwesomeIcon icon={ faCartShopping} className='   cursor-pointer   text-2xl ' />
        
        
-        <p className=' absolute  right-0 bottom-5 text-white text-lg '>{cartItem.length}</p>
+        <p className=' absolute  right-1 bottom-5  text-lg font-bold text-red-700 '>{cartItem.length}</p>
+        
         </Link>
        </div>
   

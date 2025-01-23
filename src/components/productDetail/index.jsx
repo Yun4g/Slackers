@@ -3,7 +3,6 @@ import useFetch from "../useFetch";
 import Logo  from  '/assets/logo.jpg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons"; 
-import { faFaceGrinHearts } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import { GlobalContext } from "../useContext";
 
@@ -26,13 +25,11 @@ function ProductDetail() {
         <>
         {
             loading ? (
-                <div className="  bg-slate-800 h-screen overflow-y-scroll overflow-x-hidden pb-5 ">
-                            
-                <section>
-                      <div className="flex flex-col justify-center items-center h-screen w-full">
-                        <FontAwesomeIcon icon={faFaceGrinHearts } className=" text-9xl text-white" />
-                      <h1 className="text-4xl text-white font-bold">loading...</h1>
+                <div className=" bg-gray-600 bg-opacity-50  h-screen  overflow-hidden pb-5 ">
                     
+                <section>
+                      <div className="flex flex-col justify-center items-center  h-screen w-full">
+                         <div className="border-4 border-black  animate-spin   w-14 h-14  border-dotted rounded-full  "></div>
                       </div>
 
                 </section>
@@ -49,8 +46,9 @@ function ProductDetail() {
                <nav className=' flex  gap-9 font-semibold   items-center text-slate-600'>
              
                 <div onClick={()=> navigate('/Cart-item')} className=' relative  h-[64px]   flex  items-end pb-2'>
-                      <FontAwesomeIcon icon={ faCartShopping} className=' cursor-pointer   text-3xl text-red-700' />
-                      <p className=' absolute top-0 right-2 text-2xl text-red-700'>{cartItem.length}</p>
+                <FontAwesomeIcon icon={ faCartShopping} className='   cursor-pointer   text-2xl text-slate-950 ' />  
+       <p className=' absolute top-2  right-1 bottom-5  text-lg font-bold text-red-700 '>{cartItem.length}</p>
+       
                       </div>
                  
                </nav>
