@@ -16,7 +16,7 @@ function ProductList() {
   const filterdData = data.filter((item) =>
        searchTerm
       ? item.title.toLowerCase().includes(searchTerm.toLowerCase())
-      : (<h1>not found</h1>)
+      : true
   )
 
 
