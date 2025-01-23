@@ -14,7 +14,7 @@ function GlobalState({children}) {
      
 
 
-
+     const [searchTerm, setSearchTerm] = useState("")
     const navigate = useNavigate()
     const [cartItem, setCartItem] = useState( ()=>{
        const storeData = localStorage.getItem('cart');
@@ -193,6 +193,8 @@ function GlobalState({children}) {
  
 
     return  <GlobalContext.Provider value={{navigatIon,
+        searchTerm,
+        setSearchTerm,
         addToCart,
         cartItem, 
         removeFromCart, 
